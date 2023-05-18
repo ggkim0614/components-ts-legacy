@@ -6,17 +6,42 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@material-ui/lab": "^4.0.0-alpha.61",
+    "@material-ui/utils": "^4.11.3",
+    "@storybook/addon-knobs": "^7.0.2",
     "@types/node": "20.2.0",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
+    "@types/redux-form": "^8.3.5",
+    "autosuggest-highlight": "^3.3.4",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
     "next": "13.4.2",
+    "pretty-format": "^29.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-feather": "^2.0.10",
+    "react-is": "^18.2.0",
+    "redux-form": "^8.3.10",
+    "swiper": "^9.3.2",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.12",
+    "@storybook/addon-interactions": "^7.0.12",
+    "@storybook/addon-links": "^7.0.12",
+    "@storybook/blocks": "^7.0.12",
+    "@storybook/nextjs": "^7.0.12",
+    "@storybook/react": "^7.0.12",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "eslint-plugin-storybook": "^0.6.12",
+    "storybook": "^7.0.12"
   }
 }
