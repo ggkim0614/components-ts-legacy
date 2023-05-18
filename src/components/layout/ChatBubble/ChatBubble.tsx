@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
 		bubble: {
 			backgroundColor: '#FFFFFF',
 			color: '#6D6D6D',
-			padding: '13px',
+			padding: '14px',
 			borderRadius: 0,
 		},
 		fromYou: {
@@ -51,10 +51,14 @@ const useStyles = makeStyles((theme: Theme) =>
 		},
 		read: {
 			paddingRight: '6px',
+			fontWeight: 900,
 		},
 	})
 );
 
+/**
+ * Default Chat Bubble Layout Component
+ */
 export const ChatBubble: FC<ChatBubbleProps> = ({
 	avatarImage,
 	userType,
@@ -107,7 +111,7 @@ export const ChatBubble: FC<ChatBubbleProps> = ({
 							[classes.myTimeStamp]: fromWho === 'me',
 						})}
 					>
-						<Box flexDirection="row-reverse">
+						<Box pt={0.25} flexDirection="row-reverse">
 							{read === true && (
 								<Typography className={classes.read} variant="caption">
 									Read

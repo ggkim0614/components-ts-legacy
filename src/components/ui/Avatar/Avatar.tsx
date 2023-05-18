@@ -4,66 +4,68 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Avatar as MuiAvatar } from '@material-ui/core';
 
 type AvatarProps = {
-  /**  */
-  avatarImage?: string;
-  /**  */
-  userType?: 'user' | 'company';
-  /**  */
-  avatarSize?: 'small' | 'medium' | 'large' | 'xLarge';
+	/** Image URL of the avatar component */
+	avatarImage?: string;
+	/** Is this avatar's owner an individual or a company? */
+	userType?: 'user' | 'company';
+	/** What is the size of this avatar component? */
+	avatarSize?: 'small' | 'medium' | 'large' | 'xLarge';
 };
 
 const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      border: '1px solid #F0F0F0',
-      width: '50px',
-      height: '50px',
-    },
-    company: {
-      borderRadius: '5px',
-    },
-    small: {
-      width: '36px',
-      height: '36px',
-    },
-    medium: {
-      width: '44px',
-      height: '44px',
-    },
-    large: {
-      width: '58px',
-      height: '58px',
-    },
-    xLarge: {
-      width: 80,
-      height: 80,
-    },
-  })
+	createStyles({
+		root: {
+			border: '1px solid #F0F0F0',
+			width: '50px',
+			height: '50px',
+		},
+		company: {
+			borderRadius: '5px',
+		},
+		small: {
+			width: '36px',
+			height: '36px',
+		},
+		medium: {
+			width: '44px',
+			height: '44px',
+		},
+		large: {
+			width: '58px',
+			height: '58px',
+		},
+		xLarge: {
+			width: 80,
+			height: 80,
+		},
+	})
 );
 
-/**  */
+/**
+ * Default Avatar UI Component
+ */
 export const Avatar: FC<AvatarProps> = ({
-  avatarImage,
-  userType,
-  avatarSize,
-  ...props
+	avatarImage,
+	userType,
+	avatarSize,
+	...props
 }: AvatarProps) => {
-  const classes = useStyles();
-  return (
-    <MuiAvatar
-      className={clsx(classes.root, {
-        [classes.company]: userType === 'company',
-        [classes.small]: avatarSize === 'small',
-        [classes.medium]: avatarSize === 'medium',
-        [classes.large]: avatarSize === 'large',
-        [classes.xLarge]: avatarSize === 'xLarge',
-      })}
-      src={avatarImage}
-      {...props}
-    />
-  );
+	const classes = useStyles();
+	return (
+		<MuiAvatar
+			className={clsx(classes.root, {
+				[classes.company]: userType === 'company',
+				[classes.small]: avatarSize === 'small',
+				[classes.medium]: avatarSize === 'medium',
+				[classes.large]: avatarSize === 'large',
+				[classes.xLarge]: avatarSize === 'xLarge',
+			})}
+			src={avatarImage}
+			{...props}
+		/>
+	);
 };
 
 Avatar.defaultProps = {
-  userType: 'user',
+	userType: 'user',
 };

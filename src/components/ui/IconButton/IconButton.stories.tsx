@@ -15,36 +15,13 @@ import {
 } from '..';
 
 export default {
-	title: 'components|UI/IconButton', // 스토리북에서 보여질 그룹과 경로를 명시
+	title: 'components/UI/IconButton', // 스토리북에서 보여질 그룹과 경로를 명시
 	component: IconButton, // 어떤 컴포넌트를 문서화 할지 명시
 	decorators: [withKnobs], // 애드온 적용
+	tags: ['autodocs'],
 };
 
-export const DefaultIconButton = () => {
-	return (
-		<IconButton>
-			<SendIcon />
-		</IconButton>
-	);
-};
-
-export const DefaultSquareIconButton = () => {
-	return (
-		<IconButton square>
-			<SendIcon />
-		</IconButton>
-	);
-};
-
-export const FlatIconButton = () => {
-	return (
-		<IconButton flat>
-			<MenuOutlined />
-		</IconButton>
-	);
-};
-
-export const TinyLinkIconButton = () => {
+export const IconButtonGroup = () => {
 	return (
 		<Box
 			p={4}
@@ -123,6 +100,30 @@ export const TinyLinkIconButton = () => {
 				/>
 			</IconButton>
 		</Box>
+	);
+};
+
+export const DefaultIconButton = () => {
+	return (
+		<IconButton>
+			<SendIcon />
+		</IconButton>
+	);
+};
+
+export const DefaultSquareIconButton = () => {
+	return (
+		<IconButton square>
+			<SendIcon />
+		</IconButton>
+	);
+};
+
+export const FlatIconButton = () => {
+	return (
+		<IconButton flat>
+			<MenuOutlined />
+		</IconButton>
 	);
 };
 

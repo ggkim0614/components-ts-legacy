@@ -2,15 +2,16 @@ import React from 'react';
 import { ChatBubble } from './ChatBubble';
 
 export default {
-	title: 'components|UI/ChatBubble',
+	title: 'components/Layout/ChatBubble',
 	component: ChatBubble,
+	tags: ['autodocs'],
 };
 
 export const DefaultUserSideChatBubble = () => {
 	return (
 		<div
 			style={{
-				backgroundColor: '#e8e8e8',
+				backgroundColor: '#e5e5e5',
 				padding: '16px',
 				borderRadius: '8px',
 			}}
@@ -21,7 +22,7 @@ export const DefaultUserSideChatBubble = () => {
 				message="All the best!"
 				userType="company"
 				fromWho="you"
-				timeStamp="1 min"
+				timeStamp="1min"
 			/>
 		</div>
 	);
@@ -41,7 +42,7 @@ export const ChatBubblePair = () => {
 				message="All the best!"
 				userType="company"
 				fromWho="you"
-				timeStamp="1 min"
+				timeStamp="1min"
 			/>
 			<ChatBubble
 				fromWho="me"

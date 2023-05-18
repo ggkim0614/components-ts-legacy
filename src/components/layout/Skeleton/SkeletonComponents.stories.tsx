@@ -1,23 +1,23 @@
-import React from "react";
-import { ProfileSkeleton } from "./ProfileSkeleton";
-import { FeedSkeleton } from "./FeedSkeleton";
-import { ChatSkeleton } from "./ChatSkeleton";
+import { ProfileSkeleton } from './ProfileSkeleton';
+import { FeedCardSkeleton } from './FeedSkeleton';
+import { ChatSkeleton } from './ChatSkeleton';
 
 export default {
-  title: "components|Layout/Skeletons",
-  component: ChatSkeleton,
-  FeedSkeleton,
-  ProfileSkeleton,
+	title: 'components/Layout/Skeletons',
+	component: ChatSkeleton,
+	FeedCardSkeleton,
+	ProfileSkeleton,
+	tags: ['autodocs'],
 };
 
 export const DefaultFeedSkeleton = () => {
-  return <FeedSkeleton />;
+	return <FeedCardSkeleton />;
 };
 
 export const DefaultChatSkeleton = () => {
-  return <ChatSkeleton />;
+	return <ChatSkeleton />;
 };
 
 export const DefaultProfileSkeleton = () => {
-  return <ProfileSkeleton />;
+	return <ProfileSkeleton />;
 };
