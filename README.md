@@ -6,6 +6,13 @@
 
 2019년경 [**McKinley Rice**](https://mckinleyrice.com/) 에서 현재 배포되어있는 **[CareerChat](https://careerchat.me/)의 MVP 개발에 참여**하여, [**Atomic Design Pattern**](https://bradfrost.com/blog/post/atomic-web-design/)에 따라 UI 레벨 컴포넌트부터 그 상위 레벨인 layout 레벨 컴포넌트 개발을 진행했습니다.
 
+<hr />
+
+```
+⚠️ 2019년 당시 개발했던 컴포넌트들만 개별적으로 끌어온 형태이므로 기능들은 구현되어 있지 않고, 컴포넌트들의 Storybook의 코드가(Story) 해당 버전(2019년경)의 형태 및 컨벤션으로 쓰여있습니다.
+```
+
+
 Storybook을 보고 싶으시다면 다음 커맨드들을 원하는 디렉토리에서 순차적으로 실행해주시면 됩니다.
 ```
 git clone https://github.com/ggkim0614/components-ts-legacy.git
@@ -106,7 +113,3 @@ export default createTheme({
 ```
 
 프로젝트에서 개발하는 제품이 MVP이고, Agile방식으로 개발했던 만큼 Pivoting이 필수불가결한 만큼 최하위 레벨의 컴포넌트들부터 커스터마이징 및 변경이 최대한 가능하도록 변경 가능한 값(prop)을 많이 정의하며 제작하였습니다. 
-
-```
-⚠️ 2019년 당시 개발했던 컴포넌트들만 개별적으로 끌어온 형태이므로 기능들은 구현되어 있지 않고, 컴포넌트들의 Storybook의 코드가(Story) 해당 버전(2019년경)의 형태 및 컨벤션으로 쓰여있습니다.
-```
